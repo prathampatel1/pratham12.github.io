@@ -1,0 +1,4 @@
+vocstartsoft:~/environment $ whoami
+ec2-user
+vocstartsoft:~/environment $ pwd
+/home/ec2-user/environment

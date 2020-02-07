@@ -1,0 +1,30 @@
+from Tkinter import *
+import webbrowser
+import Tkinter
+
+def callback(url):
+    webbrowser.open_new(url)
+
+root = Tk()
+
+link2 = Label(root, text="Warren High School Hyperlink", fg="blue", cursor="hand2")
+link2.pack()
+link2.bind("<Button-1>", lambda e: callback("http://www.dusd.net/warren/"))
+
+def printName(event):
+    print("Hello my name is pratham")
+
+button_1= Tkinter.Button(root, text="print my name",fg="red")
+button_1.bind("<Button-1>",printName)
+button_1.pack()
+
+def printmassage(massage):
+    print("Hi miss merchant, i request an a+ in this class because i am a techmaster")
+
+button_1= Tkinter.Button(root, text="message to miss merchant",fg="blue")
+button_1.bind("<Button-1>",printName)
+button_1.pack()
+
+root.mainloop()
+root.mainloop()  
+

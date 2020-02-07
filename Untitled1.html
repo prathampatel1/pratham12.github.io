@@ -1,0 +1,26 @@
+<div id="clockbox" onclick="f1or2=!f1or2;GetClock()"></div>
+
+<script type="text/javascript">
+var f1or2=true;
+function GetClock(){
+var d=new Date();
+var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=nhour2=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+var f1 = (nmonth+1)+"/"+ndate+"/"+nyear+" "+nhour+":"+nmin+":"+nsec+ap;
+var f2 = ndate+"/"+(nmonth+1)+"/"+nyear+" "+nhour2+":"+nmin+":"+nsec;
+
+document.getElementById('clockbox').innerHTML=f1or2?f1:f2;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script>
